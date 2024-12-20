@@ -107,10 +107,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="GameScene.cpp" />
+    <ClCompile Include="ICommand.cpp" />
+    <ClCompile Include="InputHandler.cpp" />
+    <ClCompile Include="IScene.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MathUilityForText.cpp" />
+    <ClCompile Include="MoveLeftCommand.cpp" />
+    <ClCompile Include="MoveRightCommand.cpp" />
     <ClCompile Include="myMath.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="StageScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="Resources\shaders\TerrainPS.hlsl">
@@ -189,9 +195,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameScene.h" />
+    <ClInclude Include="ICommand.h" />
+    <ClInclude Include="InputHandler.h" />
+    <ClInclude Include="IScene.h" />
     <ClInclude Include="MathUilityForText.h" />
+    <ClInclude Include="MoveLeftCommand.h" />
+    <ClInclude Include="MoveRightCommand.h" />
     <ClInclude Include="myMath.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="StageScene.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

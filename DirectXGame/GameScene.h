@@ -1,7 +1,7 @@
 #pragma once
 
 #include <KamataEngine.h>
-#include "Player.h"
+#include "StageScene.h"
 
 /// <summary>
 /// ゲームシーン
@@ -39,12 +39,8 @@ private: // メンバ変数
 	KamataEngine::DirectXCommon* dxCommon_ = nullptr;
 	KamataEngine::Input* input_ = nullptr;
 	KamataEngine::Audio* audio_ = nullptr;
-	KamataEngine::Model* model_ = nullptr;
-	KamataEngine::Camera* camera_ = nullptr;
-	Player* player_ = nullptr;
-	KamataEngine::DebugCamera* debugCamera_ = nullptr;
-	bool isDebugCameraActive_ = false;
 
+	StageScene* stageScene_ = nullptr;
 
 	/// <summary>
 	/// ゲームシーン用

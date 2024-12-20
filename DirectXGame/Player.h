@@ -1,9 +1,7 @@
 #pragma once
 
-#include <3d/WorldTransform.h>
-#include <3d/Model.h>
-#include <input/Input.h>
-#include <math/Vector3.h>
+#include "math/Vector2.h"
+#include "2d/Sprite.h"
 
 class Player {
 public: // メンバ関数
@@ -21,7 +19,7 @@ public: // メンバ関数
 	/// <summary>
 	/// 初期化
 	/// </summary>
-	void Initialize(KamataEngine::Model* model, KamataEngine::Camera* camera);
+	void Init();
 
 	/// <summary>
 	/// 毎フレーム処理
@@ -33,17 +31,13 @@ public: // メンバ関数
 	/// </summary>
 	void Draw();
 
+	void MoveRight();
+	void MoveLeft();
+
 private: // メンバ変数
-	KamataEngine::WorldTransform worldTransform_;
+	uint32_t textureHandle_ = 0;
+	KamataEngine::Sprite* sprite_ = nullptr;
 
-	KamataEngine::Model* model_ = nullptr;
-
-	KamataEngine::Camera* camera_ = nullptr;
-
-	KamataEngine::ObjectColor objColor_;
-
-	KamataEngine::Input* input_ = nullptr;
-
-	const float kMoveX = 34;
-	const float kMoveY = 18;
+	KamataEngine::Vector2 pos_ = { 10.0f,30.0f };
+	float speed_ = 1.0f;
 };
